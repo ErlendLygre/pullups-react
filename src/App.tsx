@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { NavBar } from './components/organisms';
+import { ViewParks } from './pages'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { CreatePark } from './pages'
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <NavBar/>
+        <Route exact path="/" component={ViewParks} />
+        <Route exact path="/create-park" component={CreatePark} />
+      </Router>
     </div>
   );
 }
