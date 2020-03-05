@@ -5,7 +5,7 @@ const CardContainer = styled.div`
     border-radius: 5px;
     background-color: white;
     margin: 10px;
-    flex-basis: fit-content;
+    flex-basis: 22rem;
     padding: 15px;
 `
 

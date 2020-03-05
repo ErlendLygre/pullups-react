@@ -3,6 +3,7 @@ import { Map } from '../components/organisms/Map'
 import { Park } from '../types'
 import axios from 'axios'
 import ParkCards from '../components/organisms/ParkCards'
+import CTASection from '../components/organisms/CTASection'
 
 export const ViewParks = () => {
     
@@ -18,7 +19,9 @@ export const ViewParks = () => {
     return(
         <React.Fragment>
             <Map parks={parks}/>
+            <CTASection />
             <ParkCards parks={parks}/>
+            
         </React.Fragment>
     )
 }

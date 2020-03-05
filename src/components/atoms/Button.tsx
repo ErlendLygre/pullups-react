@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const Button = styled.button`
-    min-width: 100%;
+    width: 100%;
     background-color: #fa5333;
     font-family: 'Changa One';
     color: snow;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
     padding: 10px;
     cursor: pointer;
