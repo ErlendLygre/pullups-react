@@ -30,21 +30,25 @@ label {
     margin: 15px 0 5px 0;
 }
 
+.smaller-map {
+  height: 200px;
+}
+
 .leaflet-container {
-  height: 400px;
+  height:480px;
 }
 
 textarea {
-    width: 100%;
+    min-width: 350px;
     height: 100px;
     font-size: 1rem;
+    width: 100%;
 }
 
 a {
   text-decoration: none;
   color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding-right: 30px;
 }
 

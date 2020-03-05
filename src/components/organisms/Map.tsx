@@ -1,6 +1,11 @@
 import React from 'react'
 import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Park } from '../../types';
+import styled from 'styled-components';
+
+const mapContainer = styled.div`
+    
+`
 
 interface MapProps {
     parks: Park[];
