@@ -22,6 +22,8 @@ const CTAVideoSection = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
+    width: 50%;
+    flex-grow: 0;
     background-color: rgba(255, 255, 255, 0.1);
     @media (max-width: 600px) {
         display: none;

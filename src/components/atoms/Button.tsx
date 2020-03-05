@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Button = styled.button`
     width: 100%;
+    max-width: 540px;
     background-color: #fa5333;
     font-family: 'Changa One';
     border: none;
