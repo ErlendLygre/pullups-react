@@ -10,6 +10,9 @@ const Header = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
+    @media(max-width: 500px) {
+        justify-content: center;
+    } 
 `
 
 export const NavBar = () => {
