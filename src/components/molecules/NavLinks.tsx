@@ -11,6 +11,9 @@ const Nav = styled.nav`
     width: 350px;
     display: flex;
     justify-content: space-between;
+    @media(max-width: 500px) {
+        display: none;
+    }
 `
 
 export const NavLinks = ({navitems}: NavLinkProps) => {

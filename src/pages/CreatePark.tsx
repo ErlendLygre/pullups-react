@@ -12,6 +12,9 @@ const CreateParkContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
 `
 
 const MapDiv = styled.div`
