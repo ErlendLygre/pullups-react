@@ -50,6 +50,10 @@ a {
   color: white;
   font-size: 1rem;
   padding-right: 30px;
+  &:hover {
+    opacity: 0.9;
+    transition: opacity 0.5s;
+  }
 }
 
 p {

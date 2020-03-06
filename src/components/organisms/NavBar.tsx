@@ -20,8 +20,7 @@ export const NavBar = () => {
     const [navItems] = useState<NavItem[]>(
         [
             { text: 'Vis parkene', location: '/' },
-            { text: 'Legg til park', location: '/create-park' },
-            { text: 'Om oss', location: '#' }
+            { text: 'Legg til park', location: '/create-park' }
         ]
     )
             

@@ -8,7 +8,7 @@ interface NavLinkProps {
 }
 
 const Nav = styled.nav`
-    width: 350px;
+    width: 250px;
     display: flex;
     justify-content: space-between;
     @media(max-width: 500px) {

@@ -11,6 +11,11 @@ const Button = styled.button`
     text-transform: uppercase;
     padding: 10px;
     cursor: pointer;
+    &:hover {
+        opacity: .9;
+        transform: scale(1.02);
+        transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    }
 `
 
 export default Button

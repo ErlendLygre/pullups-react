@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import H1 from '../atoms/H1'
 import Button from '../atoms/Button'
 import SecondaryButton from '../atoms/SecondaryButton'
+import { Link } from 'react-router-dom'
 
 
 const CTAContainer = styled.div`
@@ -51,7 +52,7 @@ const CTASection = () => {
         <CTAContainer>
             <CTAButtonSection>
                 <H1NoMargin>Finn en treningspark i kartet over</H1NoMargin>
-                <CTAButton>Legg til ny park</CTAButton>
+                <Link to={'/create-park'}><CTAButton>Legg til ny park</CTAButton></Link>
                 <CTASecondaryButton>Om oss</CTASecondaryButton>
             </CTAButtonSection>
             <CTAVideoSection>
