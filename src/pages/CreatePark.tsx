@@ -7,6 +7,21 @@ import FormDiv from '../components/atoms/FormDiv';
 import P from '../components/atoms/P'
 import FormWrapper from '../components/atoms/FormWrapper'
 import Button from '../components/atoms/Button';
+import * as firebase from "firebase/app";
+import "firebase/firestore";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBpMgeInHxSg3qy8xnr1xKiEQF_D3Q22YQ",
+    authDomain: "pullups-norge.firebaseapp.com",
+    databaseURL: "https://pullups-norge.firebaseio.com",
+    projectId: "pullups-norge",
+    storageBucket: "pullups-norge.appspot.com",
+    messagingSenderId: "749783225808",
+    appId: "1:749783225808:web:e3ba961d0084f8b45055d5"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
 const CreateParkContainer = styled.div`
     display: flex;
@@ -68,7 +83,23 @@ export const CreatePark = () => {
     }, [])
 
     const submitForm = () => {
-        
+        let parkData = {
+            name: parkName,
+            city: parkCity,
+            description: parkDescription,
+            author: parkAuthor,
+            created_at: new Date().toDateString(),
+            lng: lng,
+            lat: lat
+        };
+
+        db.collection("users").add(parkData)
+            .then(function (docRef) {
+                console.log("Document written with ID: ", docRef.id);
+            })
+            .catch(function (error) {
+                alert("Vi klarte ikke å sende inn skjemaet. Har du trykket på kartet og fylt inn alle feltene?");
+            });
     }
 
     return (
@@ -97,7 +128,10 @@ export const CreatePark = () => {
                     <label htmlFor="name-input">Ditt navn/kallenavn</label>
                     <Input id="author-input" onChange={ e => setParkAuthor(e.currentTarget.value)}/>
                     <label>Beskrivelse av parken</label>
-                    <textarea id="description-input" onChange={ e => setParkDescription(e.currentTarget.value)} placeholder="Tips: Hvordan ser den ut? Hva slags apparater finnes her? Hvordan finner man den?"/>
+                    <textarea 
+                        id="description-input" 
+                        onChange={ e => setParkDescription(e.currentTarget.value)} 
+                        placeholder="Tips: Hvordan ser den ut? Hva slags apparater finnes her? Hvordan finner man den?"/>
                     <CreateParkButton onClick={submitForm}>Send inn</CreateParkButton>
                 </FormDivInfo>
             </FormWrapper>
