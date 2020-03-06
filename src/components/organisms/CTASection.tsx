@@ -21,6 +21,7 @@ const CTAButtonSection = styled.div`
 const CTAVideoSection = styled.div`
     display: flex;
     align-items: center;
+    width: 50vw;
     justify-content: space-around;
     background-color: rgba(255, 255, 255, 0.1);
     @media (max-width: 600px) {
