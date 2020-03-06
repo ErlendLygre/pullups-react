@@ -17,7 +17,7 @@ interface ParkCardProps {
 
 export default function ParkCards({parks}: ParkCardProps ) {
 
-    const cards = parks.map(park => (
+    const cards = parks.slice(12).map(park => (
             <Card key={park.location} description={park.description} location={park.location} city={park.city}/>
         )
     )
